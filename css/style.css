@@ -10255,3 +10255,98 @@ textarea.form-control {
     font-size: 0.8rem;
   }
 }
+
+/* Services Page Styling */
+.feature-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #007bff;
+}
+
+.service-area-card {
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.service-area-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-color: #28a745;
+}
+
+.service-area-card h4 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.service-area-card ul li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.service-area-card ul li i {
+  font-size: 1.1rem;
+}
+
+/* Services list styling */
+.services .text ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.services .text ul li i {
+  font-size: 1rem;
+}
+
+/* Enhanced service cards */
+.services.services-2 {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid #e9ecef;
+  padding: 2rem 1.5rem;
+}
+
+.services.services-2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-color: #007bff;
+}
+
+.services.services-2 .icon {
+  margin-bottom: 1.5rem;
+}
+
+.services.services-2 .heading {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.services.services-2 p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments for services */
+@media (max-width: 768px) {
+  .services.services-2 {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card {
+    margin-bottom: 1rem;
+  }
+  
+  .service-area-card {
+    margin-bottom: 1rem;
+  }
+}

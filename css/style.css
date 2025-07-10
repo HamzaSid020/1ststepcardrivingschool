@@ -9946,3 +9946,225 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+/* Pricing Page Custom Styles */
+.price-display {
+  text-align: center;
+}
+
+.price-display .currency {
+  font-size: 1.5rem;
+  font-weight: 300;
+  vertical-align: top;
+}
+
+.price-display .amount {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.price-display .price-note {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+.card.shadow-sm {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card.shadow-sm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+.card-header {
+  border-bottom: none;
+  border-radius: 15px 15px 0 0 !important;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-body ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.card-body ul li:last-child {
+  border-bottom: none;
+}
+
+.card-body ul li i {
+  font-size: 1.1rem;
+  margin-right: 0.75rem;
+}
+
+.table-responsive {
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+}
+
+.card.border-0 {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.table.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Ensure table content is visible */
+.table-responsive .table {
+  background-color: #ffffff;
+}
+
+.table-responsive .table td,
+.table-responsive .table th {
+  border: 1px solid #dee2e6;
+  padding: 12px 8px;
+  vertical-align: middle;
+}
+
+/* Make prices more prominent */
+.table td.text-center {
+  font-weight: 600;
+  color: #28a745 !important;
+}
+
+.table th {
+  border-top: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  color: #212529 !important;
+  font-weight: 500;
+}
+
+.table .text-center {
+  text-align: center !important;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .price-display .amount {
+    font-size: 2.5rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Pricing section background */
+.ftco-section.ftco-cart {
+  background-color: #e9ecef;
+  padding: 4rem 0;
+}
+
+/* Ensure table content is visible */
+.table-responsive .table {
+  background-color: #ffffff;
+}
+
+.table-responsive .table td,
+.table-responsive .table th {
+  border: 1px solid #dee2e6;
+  padding: 12px 8px;
+  vertical-align: middle;
+}
+
+/* Make prices more prominent */
+.table td.text-center {
+  font-weight: 600;
+  color: #28a745 !important;
+}
+
+/* Individual Pricing Cards Styling */
+.pricing-item {
+  transition: all 0.3s ease;
+  border: 2px solid #e9ecef !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.pricing-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-color: #007bff !important;
+}
+
+.pricing-item .price-tag {
+  font-family: 'Poppins', sans-serif;
+}
+
+.pricing-item .currency {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #6c757d;
+  vertical-align: top;
+}
+
+.pricing-item .amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #28a745;
+  line-height: 1;
+}
+
+.pricing-item .cents {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #6c757d;
+  vertical-align: top;
+}
+
+.pricing-item h5 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-item small {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Card header enhancements */
+.card-header i {
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pricing-item .amount {
+    font-size: 2rem;
+  }
+  
+  .pricing-item h5 {
+    font-size: 0.9rem;
+  }
+}

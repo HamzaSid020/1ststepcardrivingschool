@@ -10168,3 +10168,90 @@ textarea.form-control {
     font-size: 0.9rem;
   }
 }
+
+/* Reviews Page Styling */
+.review-card {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid #e9ecef;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-color: #007bff;
+}
+
+.review-text {
+  font-style: italic;
+  line-height: 1.6;
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.review-footer {
+  border-top: 1px solid #e9ecef;
+  padding-top: 1rem;
+  margin-top: auto;
+}
+
+.stat-item {
+  padding: 1rem;
+  background: rgba(255,255,255,0.8);
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.stat-number {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
+/* Pagination styling */
+.pagination .page-link {
+  color: #007bff;
+  border: 1px solid #dee2e6;
+  margin: 0 2px;
+  border-radius: 5px;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.pagination .page-link:hover {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+/* Review card responsive adjustments */
+@media (max-width: 768px) {
+  .review-card {
+    margin-bottom: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}

@@ -94,21 +94,122 @@
 		        </div>
           </div>
           <div class="col-md-8 block-9 mb-md-5">
-            <form action="#" class="bg-light p-5 contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+            <form id="contactForm" class="bg-light p-5 contact-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="firstName" class="form-label">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Your First Name" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="lastName" class="form-label">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Your Last Name" required>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="(647) 123-4567" required>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="serviceType" class="form-label">Service Type *</label>
+                    <select id="serviceType" name="serviceType" class="form-control" required>
+                      <option value="">Select a service</option>
+                      <option value="package1">Package #1 - Complete BDE Program ($599)</option>
+                      <option value="package2">Package #2 - BDE + Road Test ($749)</option>
+                      <option value="package3">Package #3 - Premium BDE Program ($899)</option>
+                      <option value="g2-lesson">G2 License Training</option>
+                      <option value="g-lesson">G License Training</option>
+                      <option value="refresher">Refresher Course</option>
+                      <option value="road-test">Road Test Service</option>
+                      <option value="other">Other/General Inquiry</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="preferredDate" class="form-label">Preferred Start Date</label>
+                    <input type="date" id="preferredDate" name="preferredDate" class="form-control">
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="location" class="form-label">Your Location</label>
+                    <select id="location" name="location" class="form-control">
+                      <option value="">Select your area</option>
+                      <option value="mississauga">Mississauga</option>
+                      <option value="brampton">Brampton</option>
+                      <option value="oakville">Oakville</option>
+                      <option value="etobicoke">Etobicoke</option>
+                      <option value="toronto">Toronto</option>
+                      <option value="vaughan">Vaughan</option>
+                      <option value="markham">Markham</option>
+                      <option value="richmond-hill">Richmond Hill</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="experience" class="form-label">Driving Experience</label>
+                    <select id="experience" name="experience" class="form-control">
+                      <option value="">Select experience level</option>
+                      <option value="none">No experience (Complete beginner)</option>
+                      <option value="some">Some experience (Learned from family/friends)</option>
+                      <option value="licensed">Have G1 license</option>
+                      <option value="g2">Have G2 license</option>
+                      <option value="experienced">Experienced driver (refresher needed)</option>
+                    </select>
+                  </div>
+                </div>
               </div>
+
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <label for="message" class="form-label">Additional Information</label>
+                <textarea id="message" name="message" cols="30" rows="5" class="form-control" placeholder="Please tell us about your driving goals, any specific concerns, or questions you may have..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <div class="form-check">
+                  <input type="checkbox" id="newsletter" name="newsletter" class="form-check-input">
+                  <label for="newsletter" class="form-check-label">
+                    I would like to receive updates about driving courses and promotions
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary py-3 px-5">
+                  <span id="submitText">Send Message</span>
+                  <span id="submitSpinner" class="spinner-border spinner-border-sm ml-2" style="display: none;"></span>
+                </button>
+              </div>
+
+              <div id="formSuccess" class="alert alert-success mt-3" style="display: none;">
+                Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+              </div>
+              
+              <div id="formError" class="alert alert-danger mt-3" style="display: none;">
+                Sorry, there was an error sending your message. Please try again or contact us directly.
               </div>
             </form>
           
@@ -116,7 +217,7 @@
         </div>
         <div class="row justify-content-center">
         	<div class="col-md-12">
-        		<div id="map" class="bg-white"></div>
+        		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.355997518213!2d-79.64528445!3d43.557464599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b46adae28d319%3A0x4ab1576c373f6ba!2s1151%20Dundas%20St%20W%2C%20Mississauga%2C%20ON%20L5C%201C4!5e0!3m2!1sen!2sca!4v1752126204467!5m2!1sen!2sca" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         	</div>
         </div>
       </div>
@@ -205,9 +306,117 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  
+  <!-- Contact Form JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.getElementById('contactForm');
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const submitText = document.getElementById('submitText');
+      const submitSpinner = document.getElementById('submitSpinner');
+      const formSuccess = document.getElementById('formSuccess');
+      const formError = document.getElementById('formError');
+
+      // Set minimum date for preferred start date to today
+      const preferredDateInput = document.getElementById('preferredDate');
+      const today = new Date().toISOString().split('T')[0];
+      preferredDateInput.setAttribute('min', today);
+
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        submitButton.disabled = true;
+        submitText.textContent = 'Sending...';
+        submitSpinner.style.display = 'inline-block';
+        formSuccess.style.display = 'none';
+        formError.style.display = 'none';
+
+        // Collect form data
+        const formData = new FormData(contactForm);
+        const formObject = {};
+        formData.forEach((value, key) => {
+          formObject[key] = value;
+        });
+
+        // Simulate form submission (replace with actual backend endpoint)
+        setTimeout(() => {
+          // For demo purposes, we'll simulate a successful submission
+          // In a real implementation, you would send this to your server
+          console.log('Form data:', formObject);
+          
+          // Show success message
+          submitButton.disabled = false;
+          submitText.textContent = 'Send Message';
+          submitSpinner.style.display = 'none';
+          formSuccess.style.display = 'block';
+          
+          // Reset form
+          contactForm.reset();
+          
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            formSuccess.style.display = 'none';
+          }, 5000);
+          
+        }, 2000); // Simulate 2-second processing time
+      });
+
+      // Phone number formatting
+      const phoneInput = document.getElementById('phone');
+      phoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 0) {
+          if (value.length <= 3) {
+            value = `(${value}`;
+          } else if (value.length <= 6) {
+            value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+          } else {
+            value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+          }
+        }
+        e.target.value = value;
+      });
+
+      // Service type change handler
+      const serviceTypeSelect = document.getElementById('serviceType');
+      serviceTypeSelect.addEventListener('change', function(e) {
+        const selectedValue = e.target.value;
+        const messageTextarea = document.getElementById('message');
+        
+        // Pre-fill message based on service type
+        let defaultMessage = '';
+        switch(selectedValue) {
+          case 'package1':
+            defaultMessage = 'I am interested in Package #1 (Complete BDE Program). Please provide more information about the course schedule and availability.';
+            break;
+          case 'package2':
+            defaultMessage = 'I am interested in Package #2 (BDE + Road Test). Please provide more information about the road test booking process.';
+            break;
+          case 'package3':
+            defaultMessage = 'I am interested in Package #3 (Premium BDE Program). Please provide more information about the individual training component.';
+            break;
+          case 'g2-lesson':
+            defaultMessage = 'I am interested in G2 License Training. Please let me know about lesson availability and pricing.';
+            break;
+          case 'g-lesson':
+            defaultMessage = 'I am interested in G License Training. Please provide information about highway driving lessons.';
+            break;
+          case 'refresher':
+            defaultMessage = 'I am interested in a refresher course. Please let me know about assessment and training options.';
+            break;
+          case 'road-test':
+            defaultMessage = 'I am interested in road test services. Please provide information about car rental and test booking.';
+            break;
+        }
+        
+        if (defaultMessage && !messageTextarea.value) {
+          messageTextarea.value = defaultMessage;
+        }
+      });
+    });
+  </script>
     
   </body>
 </html>

@@ -135,6 +135,48 @@ i.text-success,
   color: #ffffff !important;
 }
 
+/* Footer styling - make all text white */
+.ftco-footer {
+  color: #ffffff !important;
+}
+
+.ftco-footer h2,
+.ftco-footer h3,
+.ftco-footer h4,
+.ftco-footer h5,
+.ftco-footer h6 {
+  color: #ffffff !important;
+}
+
+.ftco-footer p {
+  color: #ffffff !important;
+}
+
+.ftco-footer a {
+  color: #ffffff !important;
+}
+
+.ftco-footer a:hover {
+  color: #dc2626 !important;
+}
+
+.ftco-footer ul li {
+  color: #ffffff !important;
+}
+
+.ftco-footer .block-23 ul li {
+  color: #ffffff !important;
+}
+
+.ftco-footer .block-23 ul li .text {
+  color: #ffffff !important;
+}
+
+/* Add spacing between email icon and address */
+.ftco-footer .block-23 ul li .icon {
+  margin-right: 10px !important;
+}
+
 /* Button spacing fixes */
 .btn + .btn {
   margin-left: 1rem !important;
